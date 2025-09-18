@@ -1,0 +1,206 @@
+/* Reset cơ bản */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+/* Layout wrapper */
+
+.container {
+    max-width: 960px;
+    margin: auto;
+}
+
+
+/* Header & Nav */
+
+header {
+    margin-bottom: 20px;
+    padding: 15px 0;
+    border-bottom: 2px solid #007bff;
+}
+
+header h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+    /* Hero Section Trang chủ */
+    .main-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        background: linear-gradient(90deg, #e3f0ff 0%, #f4f6f9 100%);
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        margin: 32px auto;
+        max-width: 900px;
+    }
+    .hero-content {
+        text-align: center;
+        padding: 40px 32px;
+    }
+    .hero-icon {
+        width: 80px;
+        margin-bottom: 18px;
+        filter: drop-shadow(0 2px 8px #007bff33);
+    }
+    .hero-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #222d4c;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+    }
+    .hero-desc {
+        font-size: 1.25rem;
+        color: #444;
+        margin-bottom: 28px;
+    }
+    .highlight {
+        color: #007bff;
+        font-weight: 600;
+    }
+    .hero-btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+    }
+    .hero-btn {
+        display: inline-block;
+        background: #007bff;
+        color: #fff;
+        padding: 12px 32px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 2px 8px #007bff33;
+        transition: background 0.2s, transform 0.2s;
+    }
+    .hero-btn:hover {
+        background: #0056b3;
+        transform: translateY(-2px) scale(1.04);
+    }
+    .hero-btn.alt {
+        background: #fff;
+        color: #007bff;
+        border: 2px solid #007bff;
+    }
+    .hero-btn.alt:hover {
+        background: #e3f0ff;
+        color: #0056b3;
+    }
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+/* Tables */
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background: #007bff;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+}
+
+td,
+th {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+tr:nth-child(even) {
+    background: #f9fbff;
+}
+
+
+/* Forms */
+
+form {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #444;
+}
+
+input,
+select,
+button {
+    margin-top: 5px;
+    padding: 10px 12px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}

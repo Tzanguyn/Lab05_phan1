@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Supplier</title>
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+        <h1>Edit Supplier</h1>
+        <form action="/suppliers/<%= supplier._id %>?_method=PUT" method="POST">
+            <label>Name:</label><br>
+            <input name="name" value="<%= supplier.name %>" required><br>
+            <label>Address:</label><br>
+            <input name="address" value="<%= supplier.address %>"><br>
+            <label>Phone:</label><br>
+            <input name="phone" value="<%= supplier.phone %>"><br>
+            <button type="submit">Update</button>
+        </form>
+        <%- include("../partials/footer") %>
+</body>
+
+</html>

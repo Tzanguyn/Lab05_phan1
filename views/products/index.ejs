@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+        <div class="container">
+            <h1>Products</h1>
+            <a href="/products/new">
+                <button class="btn-primary">+ Add Product</button>
+            </a>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Supplier</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach(p => { %>
+                        <tr>
+                            <td>
+                                <%= p.name %>
+                            </td>
+                            <td>
+                                <%= p.address %>
+                            </td>
+                            <td>
+                                <%= p.phone %>
+                            </td>
+                            <td>
+                                <%= p.supplierId ? p.supplierId.name : 'N/A' %>
+                            </td>
+                            <td>
+                                <a href="/products/<%= p._id %>/edit">
+                                    <button class="btn-secondary">Edit</button>
+                                </a>
+                                <form action="/products/<%= p._id %>?_method=DELETE" method="POST" style="display:inline;">
+                                    <button type="submit" class="btn-danger" onclick="return confirm('Delete this product?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

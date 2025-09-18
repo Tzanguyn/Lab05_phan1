@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suppliers</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('../partials/header') %>
+
+  <h1>Suppliers</h1>
+  <a href="/suppliers/new">+ Add Supplier</a>
+  <table border="1" cellpadding="6">
+    <tr><th>Name</th><th>Address</th><th>Phone</th><th>Action</th></tr>
+    <% suppliers.forEach(s => { %>
+      <tr>
+        <td><%= s.name %></td>
+        <td><%= s.address %></td>
+        <td><%= s.phone %></td>
+        <td>
+          <a href="/suppliers/<%= s._id %>/edit">Edit</a>
+          <form action="/suppliers/<%= s._id %>?_method=DELETE" method="POST" style="display:inline">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+
+  <div class="main-hero">
+    <div class="hero-content">
+      <img src="https://img.icons8.com/fluency/96/box.png" alt="App Icon" class="hero-icon" />
+      <h1 class="hero-title">Supplier-Product App</h1>
+      <p class="hero-desc">Quản lý <span class="highlight">Supplier</span> & <span class="highlight">Product</span> dễ dàng, nhanh chóng.<br>
+        Chọn menu phía trên để bắt đầu!</p>
+      <div class="hero-btn-group">
+        <a href="/products" class="hero-btn">Quản lý Products</a>
+        <a href="/suppliers" class="hero-btn alt">Quản lý Suppliers</a>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

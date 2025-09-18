@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Supplier</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+
+        <h1>New Supplier</h1>
+        <form action="/suppliers" method="POST">
+            <label>Name:</label><br>
+            <input name="name" required><br>
+
+            <label>Address:</label><br>
+            <input name="address"><br>
+
+            <label>Phone:</label><br>
+            <input name="phone"><br>
+
+            <button type="submit">Create</button>
+        </form>
+
+        <%- include("../partials/footer") %>
+</body>
+
+</html>

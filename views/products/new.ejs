@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Product</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Thêm dòng này để đồng bộ CSS -->
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+
+        <div class="container">
+            <h1>New Product</h1>
+            <form action="/products" method="POST" class="form">
+                <div class="form-group">
+                    <label>Name:</label><br>
+                    <input name="name" required class="form-control"><br>
+                </div>
+
+                <div class="form-group">
+                    <label>Address:</label><br>
+                    <input name="address" class="form-control"><br>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone:</label><br>
+                    <input name="phone" class="form-control"><br>
+                </div>
+
+                <div class="form-group">
+                    <label>Supplier:</label><br>
+                    <select name="supplierId" required class="form-control">
+                    <option value="">--Select supplier--</option>
+                    <% suppliers.forEach(s => { %>
+                        <option value="<%= s._id %>"><%= s.name %></option>
+                    <% }) %>
+                </select><br>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create</button>
+            </form>
+        </div>
+
+        <%- include("../partials/footer") %>
+</body>
+
+</html>
